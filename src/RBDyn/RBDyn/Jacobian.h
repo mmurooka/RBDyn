@@ -235,7 +235,7 @@ public:
    * @param jac Jacobian to project.
    * @param res Projected Jacobian (must be allocated).
    */
-  void fullJacobian(const MultiBody & mb, const Eigen::Ref<const Eigen::MatrixXd> & jac, Eigen::MatrixXd & res) const;
+  void fullJacobian(const MultiBody & mb, const Eigen::Ref<const Eigen::MatrixXd> & jac, Eigen::Ref<Eigen::MatrixXd> res) const;
 
   /**
    * Accumulate the projection of the jacobian in the full
@@ -246,7 +246,7 @@ public:
    */
   void addFullJacobian(const MultiBody & mb,
                        const Eigen::Ref<const Eigen::MatrixXd> & jac,
-                       Eigen::MatrixXd & res) const;
+                       Eigen::Ref<Eigen::MatrixXd> res) const;
 
   /**
    * Accumulate the projection of the jacobian in the full
